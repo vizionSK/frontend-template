@@ -1,0 +1,441 @@
+/*! frontend-template v0.0.1 | (c) 2020 Andrj Karkuš | MIT License | https://github.com/Andrej1811/frontend-template.git */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Castoro&family=Roboto:wght@400;700&display=swap");
+/* line 1, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs {
+  background-color: #ccc;
+}
+
+/* line 4, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 17px 0;
+  margin-left: 15px;
+}
+
+/* line 11, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs ol li {
+  font-size: 12px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 17, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs ol li a {
+  color: #000;
+}
+
+/* line 21, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs ol li.active {
+  font-weight: 500;
+  color: #fff;
+}
+
+/* line 27, src/sass/components/_breadcrumbs.scss */
+.breadcrumbs ol li.sep {
+  font-size: 12px;
+  color: #2A2742;
+  opacity: .2;
+  margin: 0 8px;
+}
+
+/* line 1, src/sass/components/_button.scss */
+.button {
+  font-family: "Roboto" sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0 32px;
+  height: 48px;
+  line-height: 48px;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* line 14, src/sass/components/_button.scss */
+.button:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+/* line 18, src/sass/components/_button.scss */
+.button.primary {
+  background-color: #000;
+}
+
+/* line 22, src/sass/components/_button.scss */
+.button.secondary {
+  background-color: #000;
+}
+
+/* line 26, src/sass/components/_button.scss */
+.button.info {
+  color: #000;
+  background-color: skyblue;
+}
+
+/* line 31, src/sass/components/_button.scss */
+.button.success {
+  color: #fff;
+  background-color: green;
+}
+
+/* line 1, src/sass/components/_checkbox.scss */
+.custom-checkbox {
+  position: relative;
+  padding: 7px 0 7px;
+}
+
+/* line 5, src/sass/components/_checkbox.scss */
+.custom-checkbox.hidden {
+  display: none;
+}
+
+/* line 9, src/sass/components/_checkbox.scss */
+.custom-checkbox input[type="checkbox"], .custom-checkbox input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+}
+
+/* line 18, src/sass/components/_checkbox.scss */
+.custom-checkbox label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+}
+
+/* line 24, src/sass/components/_checkbox.scss */
+.custom-checkbox label span.check {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 1px solid #D9D9DD;
+  line-height: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 8px;
+}
+
+/* line 37, src/sass/components/_checkbox.scss */
+.custom-checkbox label span.check i {
+  font-size: 11px;
+  opacity: 0;
+  margin-top: 2px;
+}
+
+/* line 44, src/sass/components/_checkbox.scss */
+.custom-checkbox label span.label {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* line 50, src/sass/components/_checkbox.scss */
+.custom-checkbox label input[type="checkbox"]:checked + span.check {
+  background: green;
+  border-color: green;
+}
+
+/* line 54, src/sass/components/_checkbox.scss */
+.custom-checkbox label input[type="checkbox"]:checked + span.check i {
+  opacity: 1;
+}
+
+/* line 3, src/sass/components/_form.scss */
+.default-form .input-wrap {
+  padding: 12px 0;
+}
+
+/* line 7, src/sass/components/_form.scss */
+.default-form input, .default-form textarea {
+  width: 100%;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  font-family: "Roboto" sans-serif;
+  border: none;
+  font-size: 13px;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 24px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 2px rgba(143, 153, 179, 0.3);
+          box-shadow: 0 0 2px rgba(143, 153, 179, 0.3);
+}
+
+/* line 20, src/sass/components/_form.scss */
+.default-form input::-webkit-input-placeholder, .default-form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.default-form input::-moz-placeholder, .default-form textarea::-moz-placeholder {
+  color: #fff;
+}
+.default-form input:-ms-input-placeholder, .default-form textarea:-ms-input-placeholder {
+  color: #fff;
+}
+.default-form input::-ms-input-placeholder, .default-form textarea::-ms-input-placeholder {
+  color: #fff;
+}
+.default-form input::placeholder, .default-form textarea::placeholder {
+  color: #fff;
+}
+
+/* line 25, src/sass/components/_form.scss */
+.default-form textarea {
+  height: auto;
+  padding-left: 24px;
+  resize: none;
+}
+
+/* line 31, src/sass/components/_form.scss */
+.default-form label {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* line 1, src/sass/components/_hamburger.scss */
+.hamburger {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+/* line 14, src/sass/components/_hamburger.scss */
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: blue;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+/* line 26, src/sass/components/_hamburger.scss */
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+/* line 30, src/sass/components/_hamburger.scss */
+.hamburger span:nth-child(2), .hamburger span:nth-child(3) {
+  top: 9px;
+}
+
+/* line 34, src/sass/components/_hamburger.scss */
+.hamburger span:nth-child(4) {
+  top: 17px;
+}
+
+/* line 43, src/sass/components/_hamburger.scss */
+.hamburger.open span:nth-child(1) {
+  top: 9px;
+  width: 0;
+  left: 50%;
+}
+
+/* line 49, src/sass/components/_hamburger.scss */
+.hamburger.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* line 53, src/sass/components/_hamburger.scss */
+.hamburger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* line 57, src/sass/components/_hamburger.scss */
+.hamburger.open span:nth-child(4) {
+  top: 9px;
+  width: 0;
+  left: 50%;
+}
+
+/* line 1, src/sass/components/_quantity-input.scss */
+.q-input {
+  padding: 2px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: 4px;
+  margin: 0 15px;
+  background: #E6E6ED;
+  position: relative;
+}
+
+/* line 9, src/sass/components/_quantity-input.scss */
+.q-input .q-button {
+  width: 54px;
+  height: 44px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #000;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.22);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.22);
+}
+
+/* line 25, src/sass/components/_quantity-input.scss */
+.q-input input {
+  border: none;
+  height: 44px;
+  width: 90px;
+  font-family: Open Sans,sans-serif;
+  color: blue;
+  text-align: center;
+  font-weight: 600;
+  background: transparent;
+  -moz-appearance: textfield;
+  position: relative;
+}
+
+/* line 38, src/sass/components/_quantity-input.scss */
+.q-input .suffix {
+  position: absolute;
+  height: 44px;
+  right: 80px;
+  line-height: 44px;
+  color: blue;
+  font-weight: 600;
+}
+
+/* line 1, src/sass/components/_select.scss */
+.custom-select {
+  position: relative;
+  display: block;
+}
+
+/* line 5, src/sass/components/_select.scss */
+.custom-select select {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #dedede;
+  height: 50px;
+  padding: 0 35px 0 15px;
+  font-family: "Roboto" sans-serif;
+  font-size: 0.875rem;
+  background: url(../svg/carret-down.svg) calc(100% - 20px) center no-repeat #fff;
+}
+
+/* line 19, src/sass/components/_select.scss */
+.custom-select select::-ms-expand {
+  display: none;
+  /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
+}
+
+/* line 23, src/sass/components/_select.scss */
+.custom-select select::-webkit-input-placeholder {
+  color: #000;
+}
+.custom-select select::-moz-placeholder {
+  color: #000;
+}
+.custom-select select:-ms-input-placeholder {
+  color: #000;
+}
+.custom-select select::-ms-input-placeholder {
+  color: #000;
+}
+.custom-select select::placeholder {
+  color: #000;
+}
+
+/* line 1, src/sass/components/_tooltip.scss */
+.tooltip {
+  position: relative;
+}
+
+/* line 6, src/sass/components/_tooltip.scss */
+.tooltip:hover:after {
+  display: block;
+}
+
+/* line 11, src/sass/components/_tooltip.scss */
+.tooltip:after {
+  display: none;
+  font-size: 10px;
+  min-width: 120px;
+  color: #fff;
+  position: absolute;
+  content: attr(data-tooltip);
+  bottom: 100%;
+  left: 0;
+  width: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 5px 15px;
+  border-radius: 4px;
+  text-align: left;
+}

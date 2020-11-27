@@ -1,0 +1,26 @@
+.tooltip {
+  position: relative;
+
+  &:hover {
+
+    &:after {
+      display: block;
+    }
+  }
+
+  &:after {
+    display: none;
+    font-size: 10px;
+    min-width: 120px;
+    color: $c_white;
+    position: absolute;
+    content: attr(data-tooltip);
+    bottom: 100%;
+    left: 0;
+    width: auto;
+    background-color: rgba(0, 0, 0, .75);
+    padding: 5px 15px;
+    border-radius: $b_radius_default;
+    text-align: left;
+  }
+}

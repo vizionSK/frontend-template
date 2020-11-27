@@ -1,0 +1,35 @@
+.button {
+  font-family: $f_family_main;
+  color: $c_white;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: $b_radius_default;
+  padding: 0 32px;
+  height: 48px;
+  line-height: 48px;
+  transition: transform $t_delay $t_function;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(.95);
+  }
+
+  &.primary {
+    background-color: $c_black;
+  }
+
+  &.secondary {
+    background-color: $c_black;
+  }
+
+  &.info {
+    color: $c_black;
+    background-color: $c_info;
+  }
+
+  &.success {
+    color: $c_white;
+    background-color: $c_success;
+  }
+}

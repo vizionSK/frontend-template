@@ -1,0 +1,38 @@
+.default-form {
+
+  .input-wrap {
+    padding: 12px 0;
+  }
+
+  input, textarea {
+    width: 100%;
+    color: $c_white;
+    background: rgba(255, 255, 255, .2);
+    font-family: $f_family_main;
+    border: none;
+    font-size: 13px;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 24px;
+    border-radius: $b_radius_default;
+    box-shadow: 0 0 2px rgba(143, 153, 179, 0.3);
+
+    &::placeholder {
+      color: $c_white;
+    }
+  }
+
+  textarea {
+    height: auto;
+    padding-left: 24px;
+    resize: none;
+  }
+
+  label {
+    display: block;
+    color: $c_white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+}

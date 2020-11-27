@@ -1,0 +1,37 @@
+//
+// Colors
+// c - color | b - border
+//-----------------------------------------
+$c_white: #fff;
+$c_black: #000;
+
+$c_gray: #ccc;
+$c_blue: blue;
+$c_purple: purple;
+
+$c_danger: red;
+$c_warning: orange;
+$c_success: green;
+$c_info: skyblue;
+
+$b_color: #dedede;
+//
+// Typography
+//-----------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro&family=Roboto:wght@400;700&display=swap');
+
+$f_family_main: 'Roboto' sans-serif;
+$f_family_secondary: 'Castoro', serif;
+$f_size_base: 16px;
+$f_line_height_base: 1.5;
+$f_weight_base: 400;
+
+//
+// Other Stuff
+// b - border | t - transition
+//-----------------------------------------
+$b_radius_default: 4px;
+
+$t_delay: .2s;
+$t_function: ease;

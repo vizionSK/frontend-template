@@ -1,0 +1,46 @@
+.q-input {
+  padding: 2px;
+  display: inline-flex;
+  border-radius: $b_radius_default;
+  margin: 0 15px;
+  background: #E6E6ED;
+  position: relative;
+
+  .q-button {
+    width: 54px;
+    height: 44px;
+    font-size: 14px;
+    border-radius: $b_radius_default;
+    color: $c_black;
+    background: $c_white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.22);
+  }
+
+  input {
+    border: none;
+    height: 44px;
+    width: 90px;
+    font-family: Open Sans,sans-serif;
+    color: $c_blue;
+    text-align: center;
+    font-weight: 600;
+    background: transparent;
+    -moz-appearance: textfield;
+    position: relative;
+  }
+
+  .suffix {
+    position: absolute;
+    height: 44px;
+    right: 80px;
+    line-height: 44px;
+    color: $c_blue;
+    font-weight: 600;
+  }
+}
