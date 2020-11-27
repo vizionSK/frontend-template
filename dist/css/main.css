@@ -1,20 +1,20 @@
-/*! frontend-template v0.0.1 | (c) 2020 Andrj Karkuš | MIT License | https://github.com/Andrej1811/frontend-template.git */
+/*! frontend-template v0.0.1 | (c) 2020 Andrej Karkuš | MIT License | https://github.com/Andrej1811/frontend-template.git */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Castoro&family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Castoro&family=Roboto:wght@400;700&display=swap");
-/* line 1, src/sass/_generals.scss */
+/* line 3, src/sass/_generals.scss */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* line 4, src/sass/_generals.scss */
+/* line 6, src/sass/_generals.scss */
 *:focus {
   outline: none;
 }
 
-/* line 9, src/sass/_generals.scss */
+/* line 11, src/sass/_generals.scss */
 body {
   font-family: "Roboto" sans-serif;
   font-size: 16px;
@@ -22,42 +22,42 @@ body {
   font-weight: 400;
 }
 
-/* line 16, src/sass/_generals.scss */
+/* line 18, src/sass/_generals.scss */
 a {
   text-decoration: none;
 }
 
-/* line 20, src/sass/_generals.scss */
+/* line 22, src/sass/_generals.scss */
 ul, ol {
   margin: 0;
   padding-left: 0;
   list-style: none;
 }
 
-/* line 26, src/sass/_generals.scss */
+/* line 28, src/sass/_generals.scss */
 img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
 }
 
-/* line 32, src/sass/_generals.scss */
+/* line 34, src/sass/_generals.scss */
 button {
   border: none;
   background: transparent;
 }
 
-/* line 37, src/sass/_generals.scss */
+/* line 39, src/sass/_generals.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 41, src/sass/_generals.scss */
+/* line 43, src/sass/_generals.scss */
 .text-right {
   text-align: right;
 }
 
-/* line 45, src/sass/_generals.scss */
+/* line 47, src/sass/_generals.scss */
 .text-left {
   text-align: left;
 }

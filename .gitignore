@@ -1,4 +1,5 @@
 # Node
+dist
 node_modules
 test/results
 test/coverage

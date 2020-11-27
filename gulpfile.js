@@ -90,6 +90,9 @@ const sass    = require('gulp-sass'),
 // SVGs
 const svgmin = require('gulp-svgmin');
 
+// Images
+const imagemin = require('gulp-imagemin');
+
 // BrowserSync
 const browserSync = require('browser-sync');
 
@@ -111,7 +114,6 @@ const cleanDist = function (done) {
 
 	// Signal completion
 	return done();
-
 };
 
 // Repeated JavaScript tasks
@@ -129,20 +131,20 @@ const jsTasks = lazypipe()
 const buildScripts = function (done) {
 
 	// Make sure this feature is activated before running
-	if (!settings.scripts) return done();
+	if ( !settings.scripts ) return done();
 
 	// Run tasks on script files
 	return src(paths.scripts.input)
 		.pipe(flatmap(function(stream, file) {
 
 			// If the file is a directory
-			if (file.isDirectory()) {
+			if ( file.isDirectory() ) {
 
 				// Setup a suffix variable
-				var suffix = '';
+				let suffix = '';
 
 				// If separate polyfill files enabled
-				if (settings.polyfills) {
+				if ( settings.polyfills ) {
 
 					// Update the suffix
 					suffix = '.polyfills';
@@ -168,27 +170,25 @@ const buildScripts = function (done) {
 			return stream.pipe(jsTasks());
 
 		}));
-
 };
 
 // Lint scripts
 const lintScripts = function (done) {
 
 	// Make sure this feature is activated before running
-	if (!settings.scripts) return done();
+	if ( !settings.scripts ) return done();
 
 	// Lint scripts
 	return src(paths.scripts.input)
 		.pipe(jshint())
 		.pipe(jshint.reporter('jshint-stylish'));
-
 };
 
 // Process, lint, and minify Sass files
 const buildStyles = function (done) {
 
 	// Make sure this feature is activated before running
-	if (!settings.styles) return done();
+	if ( !settings.styles ) return done();
 
 	// Run tasks on all Sass files
 	return src(paths.styles.input)
@@ -213,20 +213,18 @@ const buildStyles = function (done) {
 			})
 		]))
 		.pipe(dest(paths.styles.output));
-
 };
 
 // Optimize SVG files
 const buildSVGs = function (done) {
 
 	// Make sure this feature is activated before running
-	if (!settings.svgs) return done();
+	if ( !settings.svgs ) return done();
 
 	// Optimize SVG files
 	return src(paths.svgs.input)
 		.pipe(svgmin())
 		.pipe(dest(paths.svgs.output));
-
 };
 
 // Copy image into output folder
@@ -237,6 +235,11 @@ const copyImages = function (done) {
 
 	// Copy static files
 	return src(paths.images.input)
+		.pipe(imagemin({
+			interlaced: true,
+			progressive: true,
+			optimizationLevel: 5,
+		}))
 		.pipe(dest(paths.images.output));
 }
 
@@ -249,7 +252,6 @@ const copyFiles = function (done) {
 	// Copy static files
 	return src(paths.copy.input)
 		.pipe(dest(paths.copy.output));
-
 };
 
 
@@ -268,19 +270,21 @@ const startServer = function (done) {
 
 	// Signal completion
 	done();
-
 };
 
 // Reload the browser when files change
 const reloadBrowser = function (done) {
-	if (!settings.reload) return done();
+	if ( !settings.reload ) return done();
+
 	browserSync.reload();
+
 	done();
 };
 
 // Watch for changes
 const watchSource = function (done) {
 	watch(paths.input, series(exports.default, reloadBrowser));
+
 	done();
 };
 /**
